@@ -1,0 +1,35 @@
+/* טעינת המנוע של Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* גלילה חלקה ונעימה כשלוחצים על לינקים פנימיים (כמו הכפתור בהרו שמוביל לטופס) */
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    /* צבע רקע טיפה שבור (לא לבן בוהק) למראה נקי של SaaS, וצבע טקסט כהה רך */
+    @apply bg-[#FBFCFE] text-slate-900;
+  }
+}
+
+/* 💎 בונוס מיליון דולר: עיצוב אישי לפס הגלילה (Scrollbar) */
+/* רוב האתרים משאירים את הפס המכוער של הדפדפן. אנחנו עושים אותו דק ואלגנטי */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* צבע רקע עדין */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* צבע הפס עצמו */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* צבע כהה יותר כשמרחפים עליו */
+}
